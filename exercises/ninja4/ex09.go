@@ -7,7 +7,7 @@ func main() {
 		"bond_james":     []string{"martinis", "women", "killing"},
 		"moneypenny_eve": []string{"flowers", "flirting", "James Bond"},
 	}
-	faves["goldfinger_aurus"] = []string{"gold", "Jaws", "expecting people to die"}
+	faves["goldfinger_auric"] = []string{"gold", "Jaws", "expecting people to die"}
 
 	for person, things := range faves {
 		fmt.Printf("%s:\n", person)
