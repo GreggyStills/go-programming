@@ -2,12 +2,6 @@ package main
 
 import "fmt"
 
-type person struct {
-	first      string
-	last       string
-	favFlavors []string
-}
-
 func main() {
 
 	p1 := struct {
