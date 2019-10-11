@@ -12,6 +12,14 @@ type person struct {
 }
 
 func main() {
+	fmt.Println("==== Test marshal ====")
+	testMarshal()
+
+	fmt.Println("==== Test unmarshal ====")
+	testUnMarshal()
+}
+
+func testMarshal() {
 	p1 := person{
 		First: "James",
 		Last:  "Bond",
@@ -31,6 +39,33 @@ func main() {
 	PrintJson(p1)
 	fmt.Println()
 	PrintJson(people)
+}
+
+func testUnMarshal() {
+	var op string = `
+[
+  {
+    "First": "Bob",
+    "Last": "Smith",
+    "Age": 32
+  },
+  {
+    "First": "Jane",
+    "Last": "Smith",
+    "Age": 27
+  }
+]
+`
+	var otherPeople []person
+
+	bs := []byte(op)
+	err := json.Unmarshal(bs, &otherPeople)
+	if err != nil {
+		fmt.Println(err)
+	}
+	fmt.Println(otherPeople)
+	PrintJson(otherPeople)
+
 }
 
 func PrintJson(i interface{}) {
