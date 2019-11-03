@@ -52,10 +52,10 @@ func main() {
 	users := []user{u1, u2, u3}
 	fmt.Println(users)
 
-	// your code goes here
-	u1.Encode()
-	u2.Encode()
-	u3.Encode()
+	for _, u := range users {
+		fmt.Printf("=== %s %s (encoded) ===\n", u.First, u.Last)
+		u.Encode()
+	}
 
 }
 
