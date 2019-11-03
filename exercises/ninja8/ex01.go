@@ -1,3 +1,6 @@
+/*
+ Starting with this code ( https://play.golang.org/p/_fQUGm9Utvl ), marshal the []user to JSON.
+*/
 package main
 
 import (
@@ -26,10 +29,10 @@ func main() {
 	users := []user{u1, u2, u3}
 	fmt.Println(users)
 
+	// your code goes here
 	jsonUsers, err := json.Marshal(users)
 	if err != nil {
 		fmt.Println(err)
 	}
 	fmt.Println(string(jsonUsers))
-
 }
