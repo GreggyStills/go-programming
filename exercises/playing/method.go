@@ -1,6 +1,9 @@
 package main
 
-import "fmt"
+import (
+"fmt"
+"runtime"
+)
 
 type person struct {
 	first string
@@ -18,6 +21,8 @@ func main() {
 	}
 	p1.Greet()
 	p2.Greet()
+
+	fmt.Println("# CPUs:", runtime.NumCPU())
 }
 
 func (p person) Greet() {
