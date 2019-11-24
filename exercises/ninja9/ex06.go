@@ -4,6 +4,7 @@ Create a program that prints out your OS and ARCH. Use the following commands to
 - go build
 - go install
 */
+
 package main
 
 import (
@@ -13,4 +14,5 @@ import (
 
 func main() {
 	fmt.Printf("OS:\t%s\nCPU:\t%s\n", runtime.GOOS, runtime.GOARCH)
+	fmt.Println(runtime.NumCPU())
 }
