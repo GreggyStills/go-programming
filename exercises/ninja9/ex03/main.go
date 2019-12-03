@@ -43,7 +43,7 @@ func my_way() {
 			fmt.Println()
 		}
 		go increment(&myInt)
-		fmt.Printf("%d(gr: %d)\t", i, runtime.NumGoroutine())
+		fmt.Printf("%d(gr: %d)\t", myInt, runtime.NumGoroutine())
 	}
 	wg.Wait()
 	fmt.Println()
