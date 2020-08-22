@@ -24,6 +24,8 @@ func main() {
 
 func increment() {
 	mu.Lock()
+	defer mu.Unlock()
+
 	if counter%5 == 0 {
 		fmt.Println()
 	} else {
@@ -31,5 +33,4 @@ func increment() {
 	}
 	counter++
 	fmt.Printf("%d (gr: %d)", counter, runtime.NumGoroutine())
-	mu.Unlock()
 }
